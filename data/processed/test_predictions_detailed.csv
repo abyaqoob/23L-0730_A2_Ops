@@ -1,0 +1,147 @@
+filename,path,true_class_name,true_label,pred_prob_ai,pred_label,is_correct,error_type
+image14.jpeg,data/raw/AiArtData/image14.jpeg,AiArtData,1,0.9610240459442139,1,True,Correct
+make-ai-landscape-from-text-with-ai-landscape-generator.jpg,data/raw/AiArtData/make-ai-landscape-from-text-with-ai-landscape-generator.jpg,AiArtData,1,0.9789465665817261,1,True,Correct
+hassan-ragab-cairo-sketches-midjourney-ai-architecture-hero_dezeen_1704_col_0.jpg,data/raw/AiArtData/hassan-ragab-cairo-sketches-midjourney-ai-architecture-hero_dezeen_1704_col_0.jpg,AiArtData,1,0.8967623114585876,1,True,Correct
+Feature-Image_MidJourney.jpg,data/raw/AiArtData/Feature-Image_MidJourney.jpg,AiArtData,1,0.6278504133224487,1,True,Correct
+lensa-harry.jpg,data/raw/AiArtData/lensa-harry.jpg,AiArtData,1,0.9971047043800354,1,True,Correct
+mystical-eye-vector-illustration-psychedelic-design-ai-generated-free-photo.jpg,data/raw/AiArtData/mystical-eye-vector-illustration-psychedelic-design-ai-generated-free-photo.jpg,AiArtData,1,0.9507537484169006,1,True,Correct
+images40.jpg,data/raw/RealArt/images40.jpg,RealArt,0,0.028675349429249763,0,True,Correct
+ai-art.jpg,data/raw/AiArtData/ai-art.jpg,AiArtData,1,0.9987951517105103,1,True,Correct
+cute-baby-animals-1558535060.jpg,data/raw/RealArt/cute-baby-animals-1558535060.jpg,RealArt,0,0.6224304437637329,1,False,False Positive (Real flagged as AI)
+fdfs22-800x533.jpg,data/raw/AiArtData/fdfs22-800x533.jpg,AiArtData,1,0.9223654270172119,1,True,Correct
+360_F_273227473_N0WRQuX3uZCJJxlHKYZF44uaJAkh2xLG.jpg,data/raw/RealArt/360_F_273227473_N0WRQuX3uZCJJxlHKYZF44uaJAkh2xLG.jpg,RealArt,0,0.8984248638153076,1,False,False Positive (Real flagged as AI)
+3048941-inline-i-2-why-google-deep-dreams-of-dogs.jpg,data/raw/AiArtData/3048941-inline-i-2-why-google-deep-dreams-of-dogs.jpg,AiArtData,1,0.9331560134887695,1,True,Correct
+Header-L-316a743.jpg,data/raw/AiArtData/Header-L-316a743.jpg,AiArtData,1,0.9743199348449707,1,True,Correct
+Animals-Names-Explore-List-of-100-Names-in-English.png,data/raw/RealArt/Animals-Names-Explore-List-of-100-Names-in-English.png,RealArt,0,0.14550021290779114,0,True,Correct
+erreurs-images.jpg,data/raw/AiArtData/erreurs-images.jpg,AiArtData,1,0.9803677797317505,1,True,Correct
+ai-generated-8175497_1280.jpg,data/raw/AiArtData/ai-generated-8175497_1280.jpg,AiArtData,1,0.933987021446228,1,True,Correct
+1000_F_557173172_OZOK6P7w9PBUajB5n9YKcGlvMYumKKaL.jpg,data/raw/AiArtData/1000_F_557173172_OZOK6P7w9PBUajB5n9YKcGlvMYumKKaL.jpg,AiArtData,1,0.9993316531181335,1,True,Correct
+Midjourney-v62.png,data/raw/AiArtData/Midjourney-v62.png,AiArtData,1,0.8269004225730896,1,True,Correct
+wild-animals-tiny-version-ai-01.jpg,data/raw/AiArtData/wild-animals-tiny-version-ai-01.jpg,AiArtData,1,0.7931005358695984,1,True,Correct
+ai-portraits-celebrities-beyonce.jpg,data/raw/AiArtData/ai-portraits-celebrities-beyonce.jpg,AiArtData,1,0.509181797504425,1,True,Correct
+1EOlo-3uyfHVlEE649tq62g.png,data/raw/AiArtData/1EOlo-3uyfHVlEE649tq62g.png,AiArtData,1,0.9971957206726074,1,True,Correct
+Red-Tailed-Guenon-Animal-Header-768x512.jpg,data/raw/RealArt/Red-Tailed-Guenon-Animal-Header-768x512.jpg,RealArt,0,0.47484076023101807,0,True,Correct
+dreamstime_m_130821195-1.jpg,data/raw/AiArtData/dreamstime_m_130821195-1.jpg,AiArtData,1,0.9101428985595703,1,True,Correct
+About-the-People-living-with-HIV-Stigma-Index.jpg,data/raw/RealArt/About-the-People-living-with-HIV-Stigma-Index.jpg,RealArt,0,0.3011033833026886,0,True,Correct
+scenery.jpg,data/raw/RealArt/scenery.jpg,RealArt,0,0.8803462386131287,1,False,False Positive (Real flagged as AI)
+33100scr.jpg,data/raw/RealArt/33100scr.jpg,RealArt,0,0.012827920727431774,0,True,Correct
+ape_photography_Photograph_Photorealist_d64c461c-1d9d-44c5-8e09-5c35a0c37ae0.jpg,data/raw/AiArtData/ape_photography_Photograph_Photorealist_d64c461c-1d9d-44c5-8e09-5c35a0c37ae0.jpg,AiArtData,1,0.3107527494430542,0,False,False Negative (AI missed as Real)
+CreationOfAdam.jpg,data/raw/AiArtData/CreationOfAdam.jpg,AiArtData,1,0.8345749378204346,1,True,Correct
+memory-palace-by-Louis-Vivin-250_out-1.png,data/raw/AiArtData/memory-palace-by-Louis-Vivin-250_out-1.png,AiArtData,1,0.7443850040435791,1,True,Correct
+Ai-Da-robot-AI-art-hed.jpg,data/raw/AiArtData/Ai-Da-robot-AI-art-hed.jpg,AiArtData,1,0.2738215923309326,0,False,False Negative (AI missed as Real)
+mouse-in-a-maze.jpg,data/raw/AiArtData/mouse-in-a-maze.jpg,AiArtData,1,0.7086896896362305,1,True,Correct
+5d395cf1a43bd-ai-transforms-celebrities-photo-into-old-portraits-paintings-5d380beb228da__700.jpg,data/raw/AiArtData/5d395cf1a43bd-ai-transforms-celebrities-photo-into-old-portraits-paintings-5d380beb228da__700.jpg,AiArtData,1,0.7744807004928589,1,True,Correct
+First-image_Fb-size_grande.jpg,data/raw/RealArt/First-image_Fb-size_grande.jpg,RealArt,0,0.020432880148291588,0,True,Correct
+ai-generated-photos-aurel-manea-1.jpg,data/raw/AiArtData/ai-generated-photos-aurel-manea-1.jpg,AiArtData,1,0.038510967046022415,0,False,False Negative (AI missed as Real)
+The-Lensa-app-generates-AI-art-but-at-what-cost_-Photo-courtesy-of-Lensa-app.-900x900.jpg,data/raw/AiArtData/The-Lensa-app-generates-AI-art-but-at-what-cost_-Photo-courtesy-of-Lensa-app.-900x900.jpg,AiArtData,1,0.8539657592773438,1,True,Correct
+images45.jpg,data/raw/RealArt/images45.jpg,RealArt,0,0.5956807732582092,1,False,False Positive (Real flagged as AI)
+famous-paintings.png,data/raw/RealArt/famous-paintings.png,RealArt,0,0.013355229049921036,0,True,Correct
+spider-monkey-gty-ps-230705_1688589803900_hpEmbed_sl_3x2.jpg,data/raw/RealArt/spider-monkey-gty-ps-230705_1688589803900_hpEmbed_sl_3x2.jpg,RealArt,0,0.10064735263586044,0,True,Correct
+ct-art-vector-illustrations-creative-minimalist-hand-drawn-vector-2286463217.jpg,data/raw/RealArt/ct-art-vector-illustrations-creative-minimalist-hand-drawn-vector-2286463217.jpg,RealArt,0,0.32151496410369873,0,True,Correct
+1000_F_564265464_mp9OwlBNexenRBJcwg5qhCwOxr4TC3gk.jpg,data/raw/AiArtData/1000_F_564265464_mp9OwlBNexenRBJcwg5qhCwOxr4TC3gk.jpg,AiArtData,1,0.9863308668136597,1,True,Correct
+meditation-kundalini-energy-colorful-psychedelic-ai-generated-art_843679-6229.jpg,data/raw/AiArtData/meditation-kundalini-energy-colorful-psychedelic-ai-generated-art_843679-6229.jpg,AiArtData,1,0.9900117516517639,1,True,Correct
+230209101637-malik-afegbua-ngochola-younger.jpg,data/raw/AiArtData/230209101637-malik-afegbua-ngochola-younger.jpg,AiArtData,1,0.9910477995872498,1,True,Correct
+1If0feu29zDCd9QIWw-vG9Q.png,data/raw/AiArtData/1If0feu29zDCd9QIWw-vG9Q.png,AiArtData,1,0.8718114495277405,1,True,Correct
+images15.jpg,data/raw/RealArt/images15.jpg,RealArt,0,0.018178921192884445,0,True,Correct
+image34.jpg,data/raw/RealArt/image34.jpg,RealArt,0,0.0440816655755043,0,True,Correct
+people-strategy_1200x700.jpg,data/raw/RealArt/people-strategy_1200x700.jpg,RealArt,0,0.20882901549339294,0,True,Correct
+portrait-faces-and-photography-french-woman-clara.jpg,data/raw/RealArt/portrait-faces-and-photography-french-woman-clara.jpg,RealArt,0,0.004821802955120802,0,True,Correct
+midjourney_v5_hero_2-800x450.jpg,data/raw/AiArtData/midjourney_v5_hero_2-800x450.jpg,AiArtData,1,0.039123114198446274,0,False,False Negative (AI missed as Real)
+960x0.jpg,data/raw/AiArtData/960x0.jpg,AiArtData,1,0.44829320907592773,0,False,False Negative (AI missed as Real)
+Two-girlfriends-students-on-a-coffee-break-outdoors-1296x728-header-1296x728.jpg,data/raw/RealArt/Two-girlfriends-students-on-a-coffee-break-outdoors-1296x728-header-1296x728.jpg,RealArt,0,0.2359967976808548,0,True,Correct
+Javan_rhino_Ujung_Kulon_NP.jpg,data/raw/RealArt/Javan_rhino_Ujung_Kulon_NP.jpg,RealArt,0,0.061259232461452484,0,True,Correct
+sunset-trees-abstract-painting-3.jpg,data/raw/RealArt/sunset-trees-abstract-painting-3.jpg,RealArt,0,0.3244178891181946,0,True,Correct
+two-game-landscapes-made-by-ai-landscape-generator.jpg,data/raw/AiArtData/two-game-landscapes-made-by-ai-landscape-generator.jpg,AiArtData,1,0.5573533177375793,1,True,Correct
+101325148.jpg,data/raw/AiArtData/101325148.jpg,AiArtData,1,0.29885050654411316,0,False,False Negative (AI missed as Real)
+images83.jpg,data/raw/RealArt/images83.jpg,RealArt,0,0.8469721078872681,1,False,False Positive (Real flagged as AI)
+baby-ping.jpg,data/raw/AiArtData/baby-ping.jpg,AiArtData,1,0.9724227786064148,1,True,Correct
+how-to-draw-easy-scenery-of-sunset-in-the-hills-1024x576.jpg,data/raw/RealArt/how-to-draw-easy-scenery-of-sunset-in-the-hills-1024x576.jpg,RealArt,0,0.01787118799984455,0,True,Correct
+fw-fox-squirrel.jpg,data/raw/RealArt/fw-fox-squirrel.jpg,RealArt,0,0.039885204285383224,0,True,Correct
+07-the-coffee-service-hossaini-art-ai.x3e656121.png,data/raw/AiArtData/07-the-coffee-service-hossaini-art-ai.x3e656121.png,AiArtData,1,0.9267390370368958,1,True,Correct
+for-desktop-nature-scenes-beautiful-scenery-1920x1080-wallpaper-preview.jpg,data/raw/RealArt/for-desktop-nature-scenes-beautiful-scenery-1920x1080-wallpaper-preview.jpg,RealArt,0,0.09529894590377808,0,True,Correct
+GettyImages-1199904654-1-820x1024.jpg,data/raw/RealArt/GettyImages-1199904654-1-820x1024.jpg,RealArt,0,0.007932194508612156,0,True,Correct
+hqdefault3.jpg,data/raw/RealArt/hqdefault3.jpg,RealArt,0,0.2710527181625366,0,True,Correct
+images76.jpg,data/raw/RealArt/images76.jpg,RealArt,0,0.20720960199832916,0,True,Correct
+64dccffa6728f2a276286964_can-ai-generated-content-rank-on-google.jpg,data/raw/AiArtData/64dccffa6728f2a276286964_can-ai-generated-content-rank-on-google.jpg,AiArtData,1,0.8044500946998596,1,True,Correct
+18871730-0-image-a-27_1569333047511.jpg,data/raw/AiArtData/18871730-0-image-a-27_1569333047511.jpg,AiArtData,1,0.7218838930130005,1,True,Correct
+taxture-scenery-poster-500x500.jpg,data/raw/RealArt/taxture-scenery-poster-500x500.jpg,RealArt,0,0.004084206186234951,0,True,Correct
+9320811-NWDRYHDP-6.jpg,data/raw/RealArt/9320811-NWDRYHDP-6.jpg,RealArt,0,0.11574020981788635,0,True,Correct
+People_heroXBD201909-00859018.jpg,data/raw/RealArt/People_heroXBD201909-00859018.jpg,RealArt,0,0.005680453032255173,0,True,Correct
+images31.jpg,data/raw/RealArt/images31.jpg,RealArt,0,0.001998230814933777,0,True,Correct
+Spot-the-bot-v1.png,data/raw/AiArtData/Spot-the-bot-v1.png,AiArtData,1,0.9360217452049255,1,True,Correct
+24jo7tag_a-delhi-and-mumbai-woman-depicted-in-the-aigenerated-artwork_625x300_29_December_22.jpg,data/raw/AiArtData/24jo7tag_a-delhi-and-mumbai-woman-depicted-in-the-aigenerated-artwork_625x300_29_December_22.jpg,AiArtData,1,0.9996601343154907,1,True,Correct
+witchy-studio-japan-psychedelic-01.jpg,data/raw/AiArtData/witchy-studio-japan-psychedelic-01.jpg,AiArtData,1,0.9948025941848755,1,True,Correct
+shutterstock_243101992.jpg,data/raw/RealArt/shutterstock_243101992.jpg,RealArt,0,0.00218343292362988,0,True,Correct
+ai-art-beautiful-psychedelic-colored-angel-with-butterflies-2-rose-santuci-sofranko.jpg,data/raw/AiArtData/ai-art-beautiful-psychedelic-colored-angel-with-butterflies-2-rose-santuci-sofranko.jpg,AiArtData,1,0.9988453388214111,1,True,Correct
+B23A9251-Edit-1024x683.jpg,data/raw/RealArt/B23A9251-Edit-1024x683.jpg,RealArt,0,0.24492305517196655,0,True,Correct
+360_F_568525285_CrGJ8Yh1noTyqu6QsocfVeGQGY91E0Jb.jpg,data/raw/RealArt/360_F_568525285_CrGJ8Yh1noTyqu6QsocfVeGQGY91E0Jb.jpg,RealArt,0,0.8842758536338806,1,False,False Positive (Real flagged as AI)
+Bashenga_10-1-1000x552.jpg,data/raw/AiArtData/Bashenga_10-1-1000x552.jpg,AiArtData,1,0.808331310749054,1,True,Correct
+original-a7d94b3e8208048992a9732624e4c7fd.png,data/raw/AiArtData/original-a7d94b3e8208048992a9732624e4c7fd.png,AiArtData,1,0.9386963248252869,1,True,Correct
+feature.jpg,data/raw/RealArt/feature.jpg,RealArt,0,0.2836746275424957,0,True,Correct
+97224914.jpg,data/raw/AiArtData/97224914.jpg,AiArtData,1,0.9678289294242859,1,True,Correct
+van-gogh.jpg,data/raw/AiArtData/van-gogh.jpg,AiArtData,1,0.11630988121032715,0,False,False Negative (AI missed as Real)
+1ddpDkJ0Zx4D37qoUehikeg.png,data/raw/AiArtData/1ddpDkJ0Zx4D37qoUehikeg.png,AiArtData,1,0.4332229197025299,0,False,False Negative (AI missed as Real)
+pexels-mali-maeder-110820-1280x720.png,data/raw/RealArt/pexels-mali-maeder-110820-1280x720.png,RealArt,0,0.23645664751529694,0,True,Correct
+ai-generated-7921580_1280.jpg,data/raw/AiArtData/ai-generated-7921580_1280.jpg,AiArtData,1,0.9593892693519592,1,True,Correct
+wild-animals-tiny-version-ai-featured.jpg,data/raw/AiArtData/wild-animals-tiny-version-ai-featured.jpg,AiArtData,1,0.8786839246749878,1,True,Correct
+23uQhgmcFTBQitCwze2wBYPCFjkCmfPzxWbygzom3YM8S8Wz5BKkMsE1NXtEq1DcZuWQS.png,data/raw/AiArtData/23uQhgmcFTBQitCwze2wBYPCFjkCmfPzxWbygzom3YM8S8Wz5BKkMsE1NXtEq1DcZuWQS.png,AiArtData,1,0.980350911617279,1,True,Correct
+WBCSD-People-and-Society_i1140.jpg,data/raw/RealArt/WBCSD-People-and-Society_i1140.jpg,RealArt,0,0.07549092173576355,0,True,Correct
+lindsey-pattison_october-2023_hero.jpg,data/raw/RealArt/lindsey-pattison_october-2023_hero.jpg,RealArt,0,0.471957802772522,0,True,Correct
+midjourney-putin.jpg,data/raw/AiArtData/midjourney-putin.jpg,AiArtData,1,0.18990148603916168,0,False,False Negative (AI missed as Real)
+zjgkiTBuW5pPg4P7rV8u_4x.jpg,data/raw/AiArtData/zjgkiTBuW5pPg4P7rV8u_4x.jpg,AiArtData,1,0.93257737159729,1,True,Correct
+self-portrait-of-a-man.jpg,data/raw/RealArt/self-portrait-of-a-man.jpg,RealArt,0,0.12715712189674377,0,True,Correct
+fpostersmallwall_textureproduct750x1000.u2.jpg,data/raw/AiArtData/fpostersmallwall_textureproduct750x1000.u2.jpg,AiArtData,1,0.7734043598175049,1,True,Correct
+1344278.jpg,data/raw/AiArtData/1344278.jpg,AiArtData,1,0.9398794174194336,1,True,Correct
+4D0B10FA-D43F-427A-8F12-084A42A52081-63ef4da8f2ef6-jpeg__700.jpg,data/raw/AiArtData/4D0B10FA-D43F-427A-8F12-084A42A52081-63ef4da8f2ef6-jpeg__700.jpg,AiArtData,1,0.9659764170646667,1,True,Correct
+85220_africa-21787_1920.rev.1600192341.jpg,data/raw/RealArt/85220_africa-21787_1920.rev.1600192341.jpg,RealArt,0,0.01007105316966772,0,True,Correct
+Israeli-artist1.jpeg,data/raw/AiArtData/Israeli-artist1.jpeg,AiArtData,1,0.9991770386695862,1,True,Correct
+image15.jpeg,data/raw/RealArt/image15.jpeg,RealArt,0,0.010462241247296333,0,True,Correct
+91NKwoumEpL._AC_UF8941000_QL80_.jpg,data/raw/RealArt/91NKwoumEpL._AC_UF8941000_QL80_.jpg,RealArt,0,0.011562644504010677,0,True,Correct
+father-and-daughter-impressionist-beach-painting-artaistry-canvas-print.jpg,data/raw/RealArt/father-and-daughter-impressionist-beach-painting-artaistry-canvas-print.jpg,RealArt,0,0.14586177468299866,0,True,Correct
+images79.jpg,data/raw/RealArt/images79.jpg,RealArt,0,0.9604099988937378,1,False,False Positive (Real flagged as AI)
+hXN3TDj3BCU8aYUFBbKG_5.3945x.jpg,data/raw/AiArtData/hXN3TDj3BCU8aYUFBbKG_5.3945x.jpg,AiArtData,1,0.7806554436683655,1,True,Correct
+Portrait_and_paint_drops_Generative_AI.png,data/raw/AiArtData/Portrait_and_paint_drops_Generative_AI.png,AiArtData,1,0.9762086868286133,1,True,Correct
+il_570xN.4588037671_ak6c.jpg,data/raw/AiArtData/il_570xN.4588037671_ak6c.jpg,AiArtData,1,0.999076247215271,1,True,Correct
+Midjourney-copyright.jpg,data/raw/AiArtData/Midjourney-copyright.jpg,AiArtData,1,0.8517444729804993,1,True,Correct
+Vincent-progress.jpg,data/raw/AiArtData/Vincent-progress.jpg,AiArtData,1,0.41823437809944153,0,False,False Negative (AI missed as Real)
+iri-painting_wide-4ba5e79b58c77487cbcc07b6b406cb2d5dcdb73d.jpg,data/raw/RealArt/iri-painting_wide-4ba5e79b58c77487cbcc07b6b406cb2d5dcdb73d.jpg,RealArt,0,0.1649991273880005,0,True,Correct
+Portrait075a-819x1024.jpg,data/raw/RealArt/Portrait075a-819x1024.jpg,RealArt,0,0.036086637526750565,0,True,Correct
+8A9FC0D0-D02D-4909-8E7B90874F98DBF2_source.jpg,data/raw/AiArtData/8A9FC0D0-D02D-4909-8E7B90874F98DBF2_source.jpg,AiArtData,1,0.08825480937957764,0,False,False Negative (AI missed as Real)
+360_F_550617518_Eu3U6kTl3mODPvnfTMFHQ88z1y5KNfNQ.jpg,data/raw/RealArt/360_F_550617518_Eu3U6kTl3mODPvnfTMFHQ88z1y5KNfNQ.jpg,RealArt,0,0.11339838057756424,0,True,Correct
+file-20231005-16-1flnlj.jpg,data/raw/RealArt/file-20231005-16-1flnlj.jpg,RealArt,0,0.014642174355685711,0,True,Correct
+midjourney_trump_pope_dance_ai_fake_image.png,data/raw/AiArtData/midjourney_trump_pope_dance_ai_fake_image.png,AiArtData,1,0.1661302149295807,0,False,False Negative (AI missed as Real)
+nature-scenery-background-821397-evzvw-fb.jpg,data/raw/RealArt/nature-scenery-background-821397-evzvw-fb.jpg,RealArt,0,0.14652855694293976,0,True,Correct
+psychedelic-artistic-image-christmas-santa-260nw-2401991075.jpg,data/raw/AiArtData/psychedelic-artistic-image-christmas-santa-260nw-2401991075.jpg,AiArtData,1,0.999774158000946,1,True,Correct
+G2_231208_TianTian.jpg,data/raw/RealArt/G2_231208_TianTian.jpg,RealArt,0,0.6950371265411377,1,False,False Positive (Real flagged as AI)
+ai-art-prompt-8.png,data/raw/AiArtData/ai-art-prompt-8.png,AiArtData,1,0.9949978590011597,1,True,Correct
+Lensa20AI20portraits202.jpg,data/raw/AiArtData/Lensa20AI20portraits202.jpg,AiArtData,1,0.9988775849342346,1,True,Correct
+nGuYVYiPu3dnmigzNfdMLZ-1200-80.jpg,data/raw/AiArtData/nGuYVYiPu3dnmigzNfdMLZ-1200-80.jpg,AiArtData,1,0.3488334119319916,0,False,False Negative (AI missed as Real)
+ai-portraits-ars.jpg,data/raw/AiArtData/ai-portraits-ars.jpg,AiArtData,1,0.9772003293037415,1,True,Correct
+147660_1.jpg,data/raw/RealArt/147660_1.jpg,RealArt,0,0.060735467821359634,0,True,Correct
+AdobeStock_591259557-1000x600.jpeg,data/raw/AiArtData/AdobeStock_591259557-1000x600.jpeg,AiArtData,1,0.9310916662216187,1,True,Correct
+serene-natural-background-depicting-peaceful-landscape-scenery-ai-generated_523886-7267.jpg,data/raw/AiArtData/serene-natural-background-depicting-peaceful-landscape-scenery-ai-generated_523886-7267.jpg,AiArtData,1,0.6645105481147766,1,True,Correct
+51sGagaZbS._AC_UF10001000_QL80_.jpg,data/raw/RealArt/51sGagaZbS._AC_UF10001000_QL80_.jpg,RealArt,0,0.07665903866291046,0,True,Correct
+06as5rHi0sgG4W2Tq.png,data/raw/AiArtData/06as5rHi0sgG4W2Tq.png,AiArtData,1,0.9477054476737976,1,True,Correct
+stability-ai-landscape.jpg,data/raw/AiArtData/stability-ai-landscape.jpg,AiArtData,1,0.8978531360626221,1,True,Correct
+sudowoodo160500053.jpg,data/raw/RealArt/sudowoodo160500053.jpg,RealArt,0,0.17496977746486664,0,True,Correct
+pexels-photo-4029925.jpeg,data/raw/RealArt/pexels-photo-4029925.jpeg,RealArt,0,0.21560071408748627,0,True,Correct
+3-x-3-template-newi.jpg,data/raw/RealArt/3-x-3-template-newi.jpg,RealArt,0,0.35686132311820984,0,True,Correct
+2ibwo5nyey_76768945_200ee080_6772_11ea_99f1_23346ee95a58.jpg,data/raw/RealArt/2ibwo5nyey_76768945_200ee080_6772_11ea_99f1_23346ee95a58.jpg,RealArt,0,0.2043115496635437,0,True,Correct
+1000_F_563719058_JXnzcPV4GRpWqmF5sqnqmbJ7ow3ca3DS.jpg,data/raw/AiArtData/1000_F_563719058_JXnzcPV4GRpWqmF5sqnqmbJ7ow3ca3DS.jpg,AiArtData,1,0.7413617968559265,1,True,Correct
+1013032_credit_wspa-jiri_rezac.jpg,data/raw/RealArt/1013032_credit_wspa-jiri_rezac.jpg,RealArt,0,0.06445568054914474,0,True,Correct
+1ayKvyXsQfIHS7OOCswZA1g.png,data/raw/AiArtData/1ayKvyXsQfIHS7OOCswZA1g.png,AiArtData,1,0.966980516910553,1,True,Correct
+13-3.png,data/raw/AiArtData/13-3.png,AiArtData,1,0.45638030767440796,0,False,False Negative (AI missed as Real)
+people-pleasing_mask.jpg,data/raw/RealArt/people-pleasing_mask.jpg,RealArt,0,0.048921357840299606,0,True,Correct
+robot-monitoring-dairy-farm-1200x800-1.jpg,data/raw/AiArtData/robot-monitoring-dairy-farm-1200x800-1.jpg,AiArtData,1,0.3213995397090912,0,False,False Negative (AI missed as Real)
+2-23-3-4-20-14-31m.jpg,data/raw/RealArt/2-23-3-4-20-14-31m.jpg,RealArt,0,0.7286226153373718,1,False,False Positive (Real flagged as AI)
+1Mcde2p8rG0uUjwwQ-tGWLg.png,data/raw/AiArtData/1Mcde2p8rG0uUjwwQ-tGWLg.png,AiArtData,1,0.7206922769546509,1,True,Correct
+ai-generated-animal-crossbreeds-06.jpg,data/raw/AiArtData/ai-generated-animal-crossbreeds-06.jpg,AiArtData,1,0.9283626675605774,1,True,Correct
+ts9dtkq8_selfies-from-the-past_625x300_21_March_23.jpg,data/raw/AiArtData/ts9dtkq8_selfies-from-the-past_625x300_21_March_23.jpg,AiArtData,1,0.7709011435508728,1,True,Correct
+_MG_5812.jpg,data/raw/RealArt/_MG_5812.jpg,RealArt,0,0.8711320757865906,1,False,False Positive (Real flagged as AI)
+9780241416907-jacket-large.jpg,data/raw/RealArt/9780241416907-jacket-large.jpg,RealArt,0,0.43152016401290894,0,True,Correct
+6487517289657f25a1e7febf_How20Generative20AI20Works20to20Create20AI20Generated20Photos.jpg,data/raw/AiArtData/6487517289657f25a1e7febf_How20Generative20AI20Works20to20Create20AI20Generated20Photos.jpg,AiArtData,1,0.9931065440177917,1,True,Correct
+black-american-portraits-130.gif,data/raw/RealArt/black-american-portraits-130.gif,RealArt,0,0.5147750377655029,1,False,False Positive (Real flagged as AI)
+MIT-3Q-GenerativeAI-01-press.jpg,data/raw/AiArtData/MIT-3Q-GenerativeAI-01-press.jpg,AiArtData,1,0.9592927098274231,1,True,Correct
+ways-to-take-stunning-portraits-3.jpg,data/raw/RealArt/ways-to-take-stunning-portraits-3.jpg,RealArt,0,0.06341078877449036,0,True,Correct
+images39.jpg,data/raw/RealArt/images39.jpg,RealArt,0,0.8667754530906677,1,False,False Positive (Real flagged as AI)
+set-safari-animals-illustration-600nw-2150029883.jpg,data/raw/RealArt/set-safari-animals-illustration-600nw-2150029883.jpg,RealArt,0,0.9025282263755798,1,False,False Positive (Real flagged as AI)
