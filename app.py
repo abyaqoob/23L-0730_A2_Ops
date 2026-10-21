@@ -7,21 +7,24 @@ from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
 from src.inference import predict_image
+from src.database import init_db, log_prediction, get_prediction_history
 
 load_dotenv()
 
 app = Flask(__name__)
 
-# Task 4.4 Settings
+# Settings from environment variables
 MODEL_PATH = os.getenv("MODEL_PATH", "models/champion_model.keras")
+MODEL_IDENTIFIER = os.getenv("MODEL_IDENTIFIER", "VisionGuard_Classifier@champion")
 DECISION_THRESHOLD = float(os.getenv("DECISION_THRESHOLD", "0.4494"))
 PORT = int(os.getenv("PORT", "5001"))
-MAX_CONTENT_LENGTH = int(os.getenv("MAX_CONTENT_LENGTH", 5 * 1024 * 1024))  # 5 MB
+MAX_CONTENT_LENGTH = int(os.getenv("MAX_CONTENT_LENGTH", 5 * 1024 * 1024))
 
 app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'webp'}
 
-IN_MEMORY_AUDIT_LOG = []
+# Initialize database schema at startup
+init_db()
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -39,16 +42,13 @@ def handle_prediction():
     if file.filename == "":
         return render_template("error.html", status_code=400, message="No file selected for upload."), 400
 
-    # Sanitize filename & validate extension
     filename = secure_filename(file.filename)
     if not allowed_file(filename):
         return render_template("error.html", status_code=415, 
                                message=f"Unsupported file format '{filename}'. Allowed formats: PNG, JPG, JPEG, WEBP."), 415
 
-    # In-memory reading: strictly zero persistence to disk
     image_bytes = file.read()
 
-    # Image decoding check
     try:
         with Image.open(io.BytesIO(image_bytes)) as img:
             img.verify()
@@ -56,24 +56,26 @@ def handle_prediction():
         return render_template("error.html", status_code=422, 
                                message="Corrupted payload. The uploaded file looks like an image but cannot be decoded."), 422
 
-    # Inference
+    # Model inference
     result = predict_image(image_bytes)
 
-    # In-memory history tracking
-    entry = {
-        "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "filename": filename,
-        "verdict": result["verdict"],
-        "confidence": result["confidence"],
-        "raw_score": result["raw_probability"]
-    }
-    IN_MEMORY_AUDIT_LOG.insert(0, entry)
+    # Task 5: Permanent SQLite audit record
+    log_prediction(
+        filename=filename,
+        model_name=MODEL_IDENTIFIER,
+        verdict=result["verdict"],
+        confidence=result["confidence"],
+        raw_score=result["raw_probability"],
+        threshold=DECISION_THRESHOLD
+    )
 
     return render_template("result.html", result=result, filename=filename)
 
 @app.route("/history", methods=["GET"])
 def history():
-    return render_template("history.html", records=IN_MEMORY_AUDIT_LOG)
+    # Task 5: Query permanent database records
+    records = get_prediction_history(limit=50)
+    return render_template("history.html", records=records)
 
 @app.route("/health", methods=["GET"])
 def health():
@@ -81,7 +83,9 @@ def health():
         "status": "healthy",
         "model_loaded": True,
         "model_path": MODEL_PATH,
+        "model_identifier": MODEL_IDENTIFIER,
         "decision_threshold": DECISION_THRESHOLD,
+        "database": "sqlite://data/visionguard_audit.db",
         "timestamp": datetime.datetime.now().isoformat()
     }), 200
 

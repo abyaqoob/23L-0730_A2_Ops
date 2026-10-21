@@ -1,34 +1,87 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="card">
-    <h2>Prediction Audit Trail</h2>
-    <div class="table-responsive">
-        <table class="history-table">
-            <thead>
-                <tr>
-                    <th>Timestamp</th>
-                    <th>Sanitized Filename</th>
-                    <th>Verdict</th>
-                    <th>Confidence</th>
-                    <th>Raw Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for row in records %}
-                <tr>
-                    <td>{{ row.timestamp }}</td>
-                    <td title="{{ row.filename }}">{{ row.filename }}</td>
-                    <td><span class="tag {{ row.verdict.lower() }}">{{ row.verdict }}</span></td>
-                    <td>{{ row.confidence }}%</td>
-                    <td>{{ row.raw_score }}</td>
-                </tr>
-                {% else %}
-                <tr>
-                    <td colspan="5" class="empty-state">No predictions recorded yet.</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+<style>
+    .container {
+        max-width: 96% !important;
+        width: 96% !important;
+        margin: 2rem auto !important;
+    }
+    .audit-card {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 1.75rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .history-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    .history-table th, .history-table td {
+        padding: 0.8rem 0.6rem;
+        border-bottom: 1px solid #334155;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .history-table th {
+        color: #94a3b8;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        background: #0f172a;
+        text-align: left;
+    }
+    .col-time   { width: 15%; font-size: 0.85rem; }
+    .col-file   { width: 33%; font-size: 0.85rem; }
+    .col-model  { width: 22%; font-size: 0.8rem; color: #38bdf8; }
+    .col-verd   { width: 12%; text-align: center; }
+    .col-conf   { width: 9%; text-align: right; }
+    .col-raw    { width: 9%; text-align: right; }
+    
+    .tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+    .tag.authentic { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+    .tag.ai-generated { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+</style>
+
+<div class="audit-card">
+    <h2 style="margin-top: 0; font-size: 1.4rem;">Database Audit Trail (SQLite)</h2>
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th class="col-time">Timestamp</th>
+                <th class="col-file">Sanitized Filename</th>
+                <th class="col-model">Model</th>
+                <th class="col-verd" style="text-align: center;">Verdict</th>
+                <th class="col-conf" style="text-align: right;">Confidence</th>
+                <th class="col-raw" style="text-align: right;">Raw Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in records %}
+            <tr>
+                <td class="col-time">{{ row.timestamp }}</td>
+                <td class="col-file" title="{{ row.filename }}">{{ row.filename }}</td>
+                <td class="col-model" title="{{ row.model_name }}"><code>{{ row.model_name }}</code></td>
+                <td class="col-verd" style="text-align: center;"><span class="tag {{ row.verdict.lower() }}">{{ row.verdict }}</span></td>
+                <td class="col-conf" style="text-align: right;">{{ row.confidence }}%</td>
+                <td class="col-raw" style="text-align: right;">{{ row.raw_score }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6" style="text-align: center; padding: 2rem; color: #94a3b8;">No predictions recorded in database yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}
