@@ -1,0 +1,5 @@
+outs:
+- md5: 392f56f21abdeceafdf2f39d594ccbfe
+  size: 235779509
+  hash: md5
+  path: resnet50v2_finetuned.keras

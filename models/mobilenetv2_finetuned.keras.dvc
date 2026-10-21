@@ -1,0 +1,5 @@
+outs:
+- md5: 37074d76baf931b2cfc13581ccced521
+  size: 26032476
+  hash: md5
+  path: mobilenetv2_finetuned.keras
