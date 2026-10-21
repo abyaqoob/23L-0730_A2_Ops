@@ -7,3 +7,4 @@ data/raw/
 tuner_logs/
 mlflow.db
 mlruns/
+models/*.keras
