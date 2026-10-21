@@ -195,3 +195,11 @@ body {
 .empty-state { text-align: center; color: var(--text-secondary); padding: 2rem !important; }
 .error-card { border-color: var(--danger); }
 .error-title { color: var(--danger); }
+
+/* Task 5 Model Column Adjustments */
+.history-table th:nth-child(1), .history-table td:nth-child(1) { width: 17%; white-space: nowrap; }
+.history-table th:nth-child(2), .history-table td:nth-child(2) { width: 30%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.history-table th:nth-child(3), .history-table td:nth-child(3) { width: 23%; font-size: 0.8rem; }
+.history-table th:nth-child(4), .history-table td:nth-child(4) { width: 12%; text-align: center; }
+.history-table th:nth-child(5), .history-table td:nth-child(5) { width: 9%; text-align: right; }
+.history-table th:nth-child(6), .history-table td:nth-child(6) { width: 9%; text-align: right; }
