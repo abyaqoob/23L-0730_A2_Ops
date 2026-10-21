@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Verify Image Authenticity</h2>
+    <p>Upload an image to assess whether it is authentic or synthetically generated.</p>
+    <form action="/predict" method="POST" enctype="multipart/form-data" class="upload-form">
+        <div class="drop-zone">
+            <input type="file" name="file" id="file" required>
+            <label for="file">Choose image or drag here (Max 5MB: JPG, PNG, WEBP)</label>
+        </div>
+        <button type="submit" class="btn">Analyze Image</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Prediction Audit Trail</h2>
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Sanitized Filename</th>
+                <th>Verdict</th>
+                <th>Confidence</th>
+                <th>Raw Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in records %}
+            <tr>
+                <td>{{ row.timestamp }}</td>
+                <td>{{ row.filename }}</td>
+                <td><span class="tag {{ row.verdict.lower() }}">{{ row.verdict }}</span></td>
+                <td>{{ row.confidence }}%</td>
+                <td>{{ row.raw_score }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5" class="empty-state">No predictions recorded yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

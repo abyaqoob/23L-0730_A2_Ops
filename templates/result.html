@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card result-card">
+    <h2>Analysis Complete</h2>
+    <div class="verdict-banner {{ result.verdict.lower() }}">
+        <span class="label">Verdict:</span>
+        <span class="value">{{ result.verdict }}</span>
+    </div>
+    
+    <div class="metrics-grid">
+        <div class="metric-item">
+            <span class="m-title">Confidence</span>
+            <span class="m-val">{{ result.confidence }}%</span>
+        </div>
+        <div class="metric-item">
+            <span class="m-title">Calibrated Score</span>
+            <span class="m-val">{{ result.raw_probability }}</span>
+        </div>
+        <div class="metric-item">
+            <span class="m-title">Decision Threshold</span>
+            <span class="m-val">{{ result.threshold }}</span>
+        </div>
+    </div>
+
+    <div class="caveat-box">
+        <strong>Forensic Caveat:</strong> {{ result.caveat }}
+    </div>
+
+    <a href="/" class="btn secondary">Analyze Another Image</a>
+</div>
+{% endblock %}
