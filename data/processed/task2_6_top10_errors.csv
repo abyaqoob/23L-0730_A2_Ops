@@ -1,0 +1,11 @@
+filename,path,true_class,pred_prob_ai,error_type,conf
+ai-generated-photos-aurel-manea-1.jpg,data/raw/AiArtData/ai-generated-photos-aurel-manea-1.jpg,AiArtData,0.038510967046022415,False Negative (AI marked Real),0.9614890329539776
+midjourney_v5_hero_2-800x450.jpg,data/raw/AiArtData/midjourney_v5_hero_2-800x450.jpg,AiArtData,0.039123114198446274,False Negative (AI marked Real),0.9608768858015537
+images79.jpg,data/raw/RealArt/images79.jpg,RealArt,0.9604099988937378,False Positive (Real marked AI),0.9604099988937378
+8A9FC0D0-D02D-4909-8E7B90874F98DBF2_source.jpg,data/raw/AiArtData/8A9FC0D0-D02D-4909-8E7B90874F98DBF2_source.jpg,AiArtData,0.08825480937957764,False Negative (AI marked Real),0.9117451906204224
+set-safari-animals-illustration-600nw-2150029883.jpg,data/raw/RealArt/set-safari-animals-illustration-600nw-2150029883.jpg,RealArt,0.9025282263755798,False Positive (Real marked AI),0.9025282263755798
+360_F_273227473_N0WRQuX3uZCJJxlHKYZF44uaJAkh2xLG.jpg,data/raw/RealArt/360_F_273227473_N0WRQuX3uZCJJxlHKYZF44uaJAkh2xLG.jpg,RealArt,0.8984248638153076,False Positive (Real marked AI),0.8984248638153076
+360_F_568525285_CrGJ8Yh1noTyqu6QsocfVeGQGY91E0Jb.jpg,data/raw/RealArt/360_F_568525285_CrGJ8Yh1noTyqu6QsocfVeGQGY91E0Jb.jpg,RealArt,0.8842758536338806,False Positive (Real marked AI),0.8842758536338806
+van-gogh.jpg,data/raw/AiArtData/van-gogh.jpg,AiArtData,0.11630988121032715,False Negative (AI marked Real),0.8836901187896729
+scenery.jpg,data/raw/RealArt/scenery.jpg,RealArt,0.8803462386131287,False Positive (Real marked AI),0.8803462386131287
+_MG_5812.jpg,data/raw/RealArt/_MG_5812.jpg,RealArt,0.8711320757865906,False Positive (Real marked AI),0.8711320757865906
