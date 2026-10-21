@@ -1,0 +1,5 @@
+outs:
+- md5: 95e3cb489ac218d00e01ad1ef24b81d3
+  size: 26032474
+  hash: md5
+  path: best_disciplined_model.keras
