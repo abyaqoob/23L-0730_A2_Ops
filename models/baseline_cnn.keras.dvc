@@ -1,0 +1,5 @@
+outs:
+- md5: fde94cadb7994f839a02cd5928d66305
+  size: 1298550
+  hash: md5
+  path: baseline_cnn.keras
