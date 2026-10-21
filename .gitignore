@@ -8,3 +8,4 @@ tuner_logs/
 mlflow.db
 mlruns/
 models/*.keras
+artifacts_staging/
