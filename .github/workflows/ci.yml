@@ -30,8 +30,10 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --exclude=.venv
 
       - name: Run unit tests
+        env:
+          PYTHONPATH: .
         run: |
-          pytest tests/
+          python -m pytest tests/
 
       - name: Build Docker image
         run: |
