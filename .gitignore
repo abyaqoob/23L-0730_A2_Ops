@@ -9,3 +9,6 @@ mlflow.db
 mlruns/
 models/*.keras
 artifacts_staging/
+
+data/
+*.db
