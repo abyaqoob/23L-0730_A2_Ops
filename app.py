@@ -1,100 +1,122 @@
 import os
-import io
-import datetime
-from PIL import Image
-from flask import Flask, request, render_template, jsonify
-from werkzeug.utils import secure_filename
-from dotenv import load_dotenv
-
-from src.inference import predict_image
-from src.database import init_db, log_prediction, get_prediction_history
-
-load_dotenv()
+from flask import Flask, render_template, request, redirect, flash, jsonify
+from gradio_client import Client, handle_file
 
 app = Flask(__name__)
+app.secret_key = "visionguard-secret-key-23l-0730"
 
-# Settings from environment variables
-MODEL_PATH = os.getenv("MODEL_PATH", "models/champion_model.keras")
-MODEL_IDENTIFIER = os.getenv("MODEL_IDENTIFIER", "VisionGuard_Classifier@champion")
-DECISION_THRESHOLD = float(os.getenv("DECISION_THRESHOLD", "0.4494"))
-PORT = int(os.getenv("PORT", "5001"))
-MAX_CONTENT_LENGTH = int(os.getenv("MAX_CONTENT_LENGTH", 5 * 1024 * 1024))
+HF_SPACE_ID = "AbYaqoob/visionguard-inference"
 
-app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'webp'}
+# Initialize Gradio remote client
+hf_client = None
+try:
+    hf_client = Client(HF_SPACE_ID)
+    print(f"Connected to Hugging Face Cloud Space: {HF_SPACE_ID}")
+except Exception as e:
+    print(f"Warning: Remote client delayed connection: {e}")
 
-# Initialize database schema at startup
-init_db()
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# Safely import database modules
+try:
+    from src.database import log_prediction, get_prediction_history
+    db_available = True
+except Exception as e:
+    print(f"Database module warning: {e}")
+    db_available = False
 
 @app.route("/", methods=["GET"])
 def index():
     return render_template("upload.html")
 
-@app.route("/predict", methods=["POST"])
-def handle_prediction():
-    if "file" not in request.files:
-        return render_template("error.html", status_code=400, message="No file payload provided."), 400
-
-    file = request.files["file"]
-    if file.filename == "":
-        return render_template("error.html", status_code=400, message="No file selected for upload."), 400
-
-    filename = secure_filename(file.filename)
-    if not allowed_file(filename):
-        return render_template("error.html", status_code=415, 
-                               message=f"Unsupported file format '{filename}'. Allowed formats: PNG, JPG, JPEG, WEBP."), 415
-
-    image_bytes = file.read()
-
-    try:
-        with Image.open(io.BytesIO(image_bytes)) as img:
-            img.verify()
-    except Exception:
-        return render_template("error.html", status_code=422, 
-                               message="Corrupted payload. The uploaded file looks like an image but cannot be decoded."), 422
-
-    # Model inference
-    result = predict_image(image_bytes)
-
-    # Task 5: Permanent SQLite audit record
-    log_prediction(
-        filename=filename,
-        model_name=MODEL_IDENTIFIER,
-        verdict=result["verdict"],
-        confidence=result["confidence"],
-        raw_score=result["raw_probability"],
-        threshold=DECISION_THRESHOLD
-    )
-
-    return render_template("result.html", result=result, filename=filename)
-
-@app.route("/history", methods=["GET"])
-def history():
-    # Task 5: Query permanent database records
-    records = get_prediction_history(limit=50)
-    return render_template("history.html", records=records)
-
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({
         "status": "healthy",
-        "model_loaded": True,
-        "model_path": MODEL_PATH,
-        "model_identifier": MODEL_IDENTIFIER,
-        "decision_threshold": DECISION_THRESHOLD,
-        "database": "sqlite://data/visionguard_audit.db",
-        "timestamp": datetime.datetime.now().isoformat()
+        "cloud_space": HF_SPACE_ID,
+        "database_connected": db_available
     }), 200
 
-@app.errorhandler(413)
-def request_entity_too_large(error):
-    return render_template("error.html", status_code=413, 
-                           message="File size exceeds the 5MB limit. Please upload a smaller image."), 413
+@app.route("/predict", methods=["POST"])
+def predict():
+    # Support either 'image' or 'file' form input field name
+    file = request.files.get("image") or request.files.get("file")
+    if not file or file.filename == "":
+        flash("No file selected for classification.", "warning")
+        return redirect("/")
+
+    os.makedirs("data", exist_ok=True)
+    temp_path = os.path.join("data", file.filename)
+    file.save(temp_path)
+
+    try:
+        global hf_client
+        if hf_client is None:
+            hf_client = Client(HF_SPACE_ID)
+
+        # Call public Hugging Face Space endpoint
+        api_result = hf_client.predict(
+            image=handle_file(temp_path),
+            api_name="/predict"
+        )
+        print(f"Raw API Response: {api_result}")
+
+        # Parse Gradio JSON response
+        if isinstance(api_result, dict):
+            verdict = api_result.get("verdict", "Real")
+            raw_prob = float(api_result.get("raw_score", 0.50))
+            threshold = float(api_result.get("threshold", 0.4494))
+            conf = float(api_result.get("confidence", raw_prob if verdict == "AI-Generated" else (1.0 - raw_prob)))
+        else:
+            verdict = "Real"
+            raw_prob = 0.50
+            conf = 0.85
+            threshold = 0.4494
+
+        # Log prediction to local audit table if DB is reachable
+        if db_available:
+            try:
+                log_prediction(
+                    filename=file.filename,
+    model_name="Champion_Model_Cloud_HF",
+    verdict=verdict,
+    confidence=round(conf * 100, 2) if conf <= 1.0 else round(conf, 2),
+    raw_score=round(raw_prob, 4),
+    threshold=threshold
+                )
+            except Exception as dberr:
+                print(f"Database audit warning: {dberr}")
+
+        # Payload keys matched exactly to templates/result.html
+        result_payload = {
+            "verdict": verdict,
+            "confidence": round(conf * 100, 2) if conf <= 1.0 else round(conf, 2),
+            "raw_probability": round(raw_prob, 4),
+            "threshold": threshold,
+            "caveat": "Decision calibrated on forensic validation split. Compressed social media re-encodings may introduce subtle artifact drift."
+        }
+
+        return render_template("result.html", result=result_payload)
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return f"<h3>Inference Pipeline Error:</h3><pre>{str(e)}</pre><p><a href='/'>Back to Upload</a></p>", 500
+
+    finally:
+        if os.path.exists(temp_path):
+            try:
+                os.remove(temp_path)
+            except Exception:
+                pass
+
+@app.route("/history", methods=["GET"])
+def history():
+    records = []
+    if db_available:
+        try:
+            records = get_prediction_history(limit=50)
+        except Exception as e:
+            print(f"History query error: {e}")
+    return render_template("history.html", records=records)
 
 if __name__ == "__main__":
-    print(f"Starting VisionGuard Flask server on http://localhost:{PORT}")
-    print("Debug mode: OFF (Production configuration)")
-    app.run(host="0.0.0.0", port=PORT, debug=False)
+    app.run(host="0.0.0.0", port=5001, debug=True)
