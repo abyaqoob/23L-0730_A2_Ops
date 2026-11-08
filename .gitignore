@@ -12,3 +12,9 @@ artifacts_staging/
 
 data/
 *.db
+
+*.tar
+*.sql
+*.png
+*.jpg
+__pycache__/
